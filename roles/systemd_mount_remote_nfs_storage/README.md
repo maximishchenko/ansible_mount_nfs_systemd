@@ -6,9 +6,9 @@ This role mount NFS storage with systemd unit.
 Role Variables
 --------------
 
-* `nfs_server`
-* `nfs_export`
-* `mount_base_path`
+* `nfs_server` - IP address or FQDN name of systemd unit
+* `nfs_export` - NFS export directory name
+* `mount_base_path` - base path in local filesystem for mount NFS storage (default: /mnt/nfs)
 
 Example Playbook
 ----------------

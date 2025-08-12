@@ -1,16 +1,11 @@
-# Ansible PostgreSQL for 1C from Postgres Professional installation
+# Ansible Mount NFS storage with systemd automount unit
 
 Playbook
 
-- Validate required variables, such as `postgres_password` and `app_1c_password`
-- Check if pgpro specific version repository exists
-- Remove old repository file if exists
-- Add repository for specific PostgreSQL version (`postgresql_1c_version` variable)
-- Install PostgreSQL
-- Set password for postgres user
-- Create user for 1C application (`app_1c_user` variable)
-- Set password for user of 1C application (`app_1c_password` varable)
-- Grant permission for user of 1C application
+- Install NFS Client
+- Generate mount entrypoint name, mount unit name and automount unit name
+- Create mount entrypoint if not exists
+- Create mount and automount systemd units
 
 ## Preparation
 
@@ -39,4 +34,4 @@ make setup INVENTORY=inventory/my_inventory_file.cfg
 2. Run Ansible Playbook directly
 
 ```shell
-ansible-playbook -i inventory/inventory.cfg install_1c_postgres_pro.yml
+ansible-playbook -i inventory/inventory.cfg nfs_storage_automount.yml
