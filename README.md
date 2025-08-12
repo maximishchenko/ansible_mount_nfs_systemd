@@ -9,9 +9,9 @@ Playbook
 
 ## Preparation
 
-1. Add servers IP or FQDN to inventory file such as ```inventory/inventory.cfg```
+1. Add servers IP or FQDN to inventory file such as ```inventory/inventory.yml```
 
-> Example [inventory/inventory.ini.sample](inventory/inventory.ini.sample))
+> Example [inventory/inventory.sample.yml](inventory/inventory.sample.yml))
 
 2. Add variables to host_vars or group_vars
 

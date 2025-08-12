@@ -6,4 +6,5 @@ host_vars/*
 !host_vars/0.0.0.1/
 !host_vars/0.0.0.1/*
 inventory/*
-!inventory/inventory.ini.sample
+!inventory/inventory.sample.yml
+!inventory/inventory.sample.ini
