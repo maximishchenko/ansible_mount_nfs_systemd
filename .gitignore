@@ -1,0 +1,9 @@
+/**/vault
+.vaultpass
+group_vars/*
+!group_vars/.gitkeep
+host_vars/*
+!host_vars/0.0.0.1/
+!host_vars/0.0.0.1/*
+inventory/*
+!inventory/inventory.ini.sample

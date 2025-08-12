@@ -1,0 +1,9 @@
+[Unit]
+Description=Automount NFS share {{ nfs_export }} from {{ nfs_server }} at {{ mount_path }}
+
+[Automount]
+Where={{ mount_path }}
+TimeoutIdleSec=10
+
+[Install]
+WantedBy=multi-user.target

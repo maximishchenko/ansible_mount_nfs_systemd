@@ -1,0 +1,16 @@
+---
+- name: Update repositories packages
+  apt:
+    upgrade: yes
+    update_cache: yes
+  when: ansible_os_family == 'Debian'
+
+- name: Install NFS client packages
+  package:
+    name:
+      - nfs-common
+    state: present
+  notify:
+    - Remove useless packages
+    - Remove useless dependencies
+  when: ansible_os_family == 'Debian'

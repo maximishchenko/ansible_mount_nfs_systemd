@@ -1,0 +1,19 @@
+---
+- name: Generate mount directory name and path
+  set_fact:
+    mount_dir_name: "{{ nfs_export | basename }}"
+    mount_path: "{{ mount_base_path }}/{{ nfs_export | basename }}"
+    unit_name_prefix: "{{ mount_base_path | regex_replace('^/', '') | replace('/', '-') }}-{{ nfs_export | basename }}"
+
+- name: Check if directory exists
+  stat:
+    path: "{{ mount_path }}"
+  register: dir_stat
+
+- name: Create directory only if it doesn't exist
+  file:
+    path: "{{ mount_path }}"
+    state: directory
+    recurse: yes
+  when: not dir_stat.stat.exists
+

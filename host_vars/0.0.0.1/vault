@@ -1,0 +1,5 @@
+vault_ansible_user: ansible
+vault_ssh_private_key: "~/.ssh/id_rsa"
+vault_ansible_become_password: thisisverysecurestrongansibleuserpassword
+vault_nfs_server: 0.0.0.1
+vault_nfs_export: export_dir

@@ -1,0 +1,12 @@
+---
+- name: Reload systemd
+  systemd:
+    daemon_reload: true
+
+- name: Remove useless packages
+  apt:
+    autoclean: yes
+
+- name: Remove useless dependencies
+  apt:
+    autoremove: yes

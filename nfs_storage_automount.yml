@@ -1,0 +1,5 @@
+---
+- name: Automount remote NFS storage with systemd
+  hosts: all
+  roles:
+    - { role: systemd_mount_remote_nfs_storage }

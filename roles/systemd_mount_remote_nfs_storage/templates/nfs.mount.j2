@@ -1,0 +1,8 @@
+[Unit]
+Description=Mount NFS share {{ nfs_export }} from {{ nfs_server }} at {{ mount_path }}
+
+[Mount]
+What={{ nfs_server }}:{{ nfs_export }}
+Where={{ mount_path }}
+Type=nfs
+Options=defaults,noatime

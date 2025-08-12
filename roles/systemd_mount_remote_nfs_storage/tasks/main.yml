@@ -1,0 +1,7 @@
+---
+- name: NFS Client Installation
+  ansible.builtin.include_tasks: includes/install_nfs_client.yml
+- name: Create mount entrypoint
+  ansible.builtin.include_tasks: includes/create_mount_entrypoint.yml
+- name: Create systemd units
+  ansible.builtin.include_tasks: includes/create_systemd_units.yml
